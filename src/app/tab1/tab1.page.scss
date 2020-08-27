@@ -1,7 +1,28 @@
 ion-header{
-    background: red;
+    background: #400101;;
 }
+ion-card{
+    background-image: url(https://resizer.mundotkm.com/unsafe/fit-in/625x418/smart/http://cfus01.mundotkm.com/2016/04/2-45.jpg);
+    background-color:rgba(165, 137, 51, 1);
+    color: rgba(63, 1, 1, 1);
+}
+ion-card-subtitle{
+    color: rgba(140, 39, 2, 1);
+}
+ion-item{
+    color: rgb(228, 201, 192);
+}
+ion-input{
+    margin-left: 120px;
+    color: white;
+    font-size: 1em;
 
+}
+ion-label{
+    text-align: center;
+    font-size: 1em;
+    color: white;
+}
 .win {
     font-size: 2em;
     text-align: center;

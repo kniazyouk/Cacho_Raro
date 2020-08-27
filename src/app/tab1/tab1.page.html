@@ -22,24 +22,24 @@
     <ion-card-content>
       Estamos en la tierra fantástica de Oz, el hombre de lata nos propone jugar un juego, y saca de su armazón metálico cuatro dados extraños, sólo tienen 3 caras 😳. Nos explica que el que saque las 4 caras iguales, gana la partida.
     </ion-card-content>
-
-    <ion-item>
-      <ion-label>Dado 1</ion-label>
-      <ion-input disabled="true" [(ngModel)]="dado1" type="number" value="0"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Dado 2</ion-label>
-      <ion-input disabled="true"[(ngModel)]="dado2" type="number" value="0"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Dado 3</ion-label>
-      <ion-input disabled="true" [(ngModel)]="dado3" type="number" value="0"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Dado 4</ion-label>
-      <ion-input disabled="true" [(ngModel)]="dado4" type="number" value="0"></ion-input>
-    </ion-item>
-
+    <div id="inputs">
+      <ion-item id="dado1">
+        <ion-label position="floating">Dado 1</ion-label>
+        <ion-input disabled="true" [(ngModel)]="dado1" type="number" value="0"></ion-input>
+      </ion-item>
+      <ion-item id="dado2">
+        <ion-label position="floating">Dado 2</ion-label>
+        <ion-input disabled="true"[(ngModel)]="dado2" type="number" value="0"></ion-input>
+      </ion-item>
+      <ion-item id="dado3">
+        <ion-label position="floating">Dado 3</ion-label>
+        <ion-input disabled="true" [(ngModel)]="dado3" type="number" value="0"></ion-input>
+      </ion-item>
+      <ion-item id="dado4">
+        <ion-label position="floating">Dado 4</ion-label>
+        <ion-input disabled="true" [(ngModel)]="dado4" type="number" value="0"></ion-input>
+      </ion-item>
+    </div>
     <ion-button (click)="lanzar()" expand="full" color="success">Empezar el viaje!</ion-button>
     
     <div *ngIf="dado1 > 0 && dado1 === dado2 && dado2 > 0 && dado1 === dado3 && dado3 > 0 && dado1 === dado4 && dado4 > 0" class="win">
