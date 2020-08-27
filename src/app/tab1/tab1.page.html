@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Cacho Raro
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,47 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">HOLA</ion-title>
+      <ion-title size="large">Cacho Raro</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Mundo de Oz</ion-card-subtitle>
+      <ion-card-title>Los Dados Extraños</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Estamos en la tierra fantástica de Oz, el hombre de lata nos propone jugar un juego, y saca de su armazón metálico cuatro dados extraños, sólo tienen 3 caras 😳. Nos explica que el que saque las 4 caras iguales, gana la partida.
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label>Dado 1</ion-label>
+      <ion-input disabled="true" [(ngModel)]="dado1" type="number" value="0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dado 2</ion-label>
+      <ion-input disabled="true"[(ngModel)]="dado2" type="number" value="0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dado 3</ion-label>
+      <ion-input disabled="true" [(ngModel)]="dado3" type="number" value="0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dado 4</ion-label>
+      <ion-input disabled="true" [(ngModel)]="dado4" type="number" value="0"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="lanzar()" expand="full" color="success">Empezar el viaje!</ion-button>
+    
+    <div *ngIf="dado1 > 0 && dado1 === dado2 && dado2 > 0 && dado1 === dado3 && dado3 > 0 && dado1 === dado4 && dado4 > 0" class="win">
+      Los lados son iguales...! <br>
+      Ganaste!!!
+    </div>
+
+    <div *ngIf="dado1 !== dado2 || dado1 !== dado3 || dado1 !== dado4" class="lost">
+      Los lados NO son iguales...! <br>
+      Perdiste...!:(
+    </div>
+  </ion-card>
 </ion-content>
